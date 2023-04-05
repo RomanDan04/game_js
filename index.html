@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h2 class="header__title" id="header__title">Guessing color game</h2>
+            <h1 class="header__color" id="header__color">guest 10 colors and win!</h1>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="container">
+            <div class="menu__item" onclick="stop_game()">Stop game</div>
+            <div class="menu__item">Timer: <span id="timer">01:00</span></div>
+        </div>
+    </div>
+    
+    <div class="colors">
+        <div class="container">
+            <div class="colors__content colors__hide" id="colors__content">
+                <div class="colors__row">
+                    <div class="colors__item" onclick="setTimeout(() => {check_col(this)}, 300);">
+                        <div class="color__true" id="color__true">
+                            <i class="fa fa-check-circle-o"></i>
+                        </div>
+                        <div class="color__false" id="color__false">
+                            <i class="fa fa-times-circle-o"></i>
+                        </div>
+                    </div>
+                    <div class="colors__item" onclick="setTimeout(() => {check_col(this)}, 300);">
+                        <div class="color__true" id="color__true">
+                            <i class="fa fa-check-circle-o"></i>
+                        </div>
+                        <div class="color__false" id="color__false">
+                            <i class="fa fa-times-circle-o"></i>
+                        </div>
+                    </div>
+                    <div class="colors__item" onclick="setTimeout(() => {check_col(this)}, 300);">
+                        <div class="color__true" id="color__true">
+                            <i class="fa fa-check-circle-o"></i>
+                        </div>
+                        <div class="color__false" id="color__false">
+                            <i class="fa fa-times-circle-o"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="colors__row">
+                    <div class="colors__item" onclick="setTimeout(() => {check_col(this)}, 300);">
+                        <div class="color__true" id="color__true">
+                            <i class="fa fa-check-circle-o"></i>
+                        </div>
+                        <div class="color__false" id="color__false">
+                            <i class="fa fa-times-circle-o"></i>
+                        </div>
+                    </div>
+                    <div class="colors__item" onclick="setTimeout(() => {check_col(this)}, 300);">
+                        <div class="color__true" id="color__true">
+                            <i class="fa fa-check-circle-o"></i>
+                        </div>
+                        <div class="color__false" id="color__false">
+                            <i class="fa fa-times-circle-o"></i>
+                        </div>
+                    </div>
+                    <div class="colors__item" onclick="setTimeout(() => {check_col(this)}, 300);">
+                        <div class="color__true" id="color__true">
+                            <i class="fa fa-check-circle-o"></i>
+                        </div>
+                        <div class="color__false" id="color__false">
+                            <i class="fa fa-times-circle-o"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors__message" id="colors__message">
+                <h1 class="colors__title">Start new game?</h1>
+                <button class="colors__button n_game" onclick="start_game();">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
+        <div class="results__content">
+            <h3 class="results__title">Correct answers <span>4</span> out of 10</h3>
+            <button class="colors__button n_game" onclick="start_game();">Restart</button>
+        </div>
+    </div>
+    <!--scripts-->
+    <script src="script.js"></script>
+</body>
+</html>
